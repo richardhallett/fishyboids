@@ -6,6 +6,11 @@
         "preserveConstEnums": true,
         "out": "./js/app.js",
         "sourceMap": true,
-        "watch": true
-    }
+        "watch": false    
+    },    
+    "exclude": [
+        "typings/main.d.ts",
+        "typings/main",
+        "js"
+    ]
 }

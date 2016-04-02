@@ -1,6 +1,4 @@
-﻿/// <reference path="../typings/threejs/three.d.ts"/>
-
-/// <reference path="FishMesh.ts"/>
+﻿/// <reference path="FishMesh.ts"/>
 /// <reference path="FishGeometry.ts"/>
 /// <reference path="Boid.ts"/>
 /// <reference path="Predator.ts"/>

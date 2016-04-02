@@ -1,0 +1,23 @@
+{
+  "version": false,
+  "ambientDependencies": {
+    "dat-gui": "github:DefinitelyTyped/DefinitelyTyped/dat-gui/dat-gui.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "detector": "github:DefinitelyTyped/DefinitelyTyped/threejs/detector.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three": "registry:dt/three#0.0.0+20160331065219",
+    "three-FirstPersonControls": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-FirstPersonControls.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-canvasrenderer": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-canvasrenderer.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-copyshader": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-copyshader.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-css3drenderer": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-css3drenderer.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-editorcontrols": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-editorcontrols.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-effectcomposer": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-effectcomposer.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-maskpass": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-maskpass.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-orbitcontrols": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-orbitcontrols.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-projector": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-projector.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-renderpass": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-renderpass.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-shaderpass": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-shaderpass.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-trackballcontrols": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-trackballcontrols.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-transformcontrols": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-transformcontrols.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-vrcontrols": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-vrcontrols.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233",
+    "three-vreffect": "github:DefinitelyTyped/DefinitelyTyped/threejs/three-vreffect.d.ts#fa04c80f4a889613b96cb4f283848c61a9f64233"
+  }
+}
