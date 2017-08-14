@@ -1,0 +1,24 @@
+{
+  "name": "fishyboids",
+  "version": "1.0.0",
+  "description": "A simulation of flocking with fish",
+  "dependencies": {
+    "@types/dat-gui": "^0.6.3"
+  },
+  "devDependencies": {
+    "@types/three": "^0.84.19"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardhallett/fishyboids.git"
+  },
+  "author": "Richard Hallett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardhallett/fishyboids/issues"
+  },
+  "homepage": "https://github.com/richardhallett/fishyboids#readme"
+}

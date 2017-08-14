@@ -1,8 +1,13 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var FishyBoids;
 (function (FishyBoids) {
     var FishMesh = (function (_super) {
@@ -10,17 +15,18 @@ var FishyBoids;
         function FishMesh(position, baseColour) {
             if (position === void 0) { position = new THREE.Vector3(); }
             if (baseColour === void 0) { baseColour = new THREE.Color(); }
-            _super.call(this);
-            this.animStep = 0;
-            this.position = position;
-            this.geometry = new FishyBoids.FishGeometry();
-            this.material = new THREE.MeshPhongMaterial({ side: THREE.DoubleSide, vertexColors: THREE.FaceColors });
-            this.geometry.faces[0].color.set(baseColour);
-            this.geometry.faces[1].color.set(baseColour);
-            this.geometry.faces[2].color.setRGB(baseColour.r - 0.4, baseColour.g - 0.4, baseColour.b - 0.4);
+            var _this = _super.call(this) || this;
+            _this.animStep = 0;
+            _this.position = position;
+            _this.geometry = new FishyBoids.FishGeometry();
+            _this.material = new THREE.MeshPhongMaterial({ side: THREE.DoubleSide, vertexColors: THREE.FaceColors });
+            _this.geometry.faces[0].color.set(baseColour);
+            _this.geometry.faces[1].color.set(baseColour);
+            _this.geometry.faces[2].color.setRGB(baseColour.r - 0.4, baseColour.g - 0.4, baseColour.b - 0.4);
             var finColour = new THREE.Color(baseColour.r - 0.3, baseColour.g - 0.3, baseColour.b - 0.3);
-            this.geometry.faces[3].color.set(finColour);
-            this.geometry.faces[4].color.set(finColour);
+            _this.geometry.faces[3].color.set(finColour);
+            _this.geometry.faces[4].color.set(finColour);
+            return _this;
         }
         FishMesh.prototype.animate = function (speed) {
             if (speed === void 0) { speed = 0.2; }
@@ -32,7 +38,7 @@ var FishyBoids;
             this.animStep = (this.animStep + speed + this.rotation.z) % (Math.PI * 2);
         };
         return FishMesh;
-    })(THREE.Mesh);
+    }(THREE.Mesh));
     FishyBoids.FishMesh = FishMesh;
 })(FishyBoids || (FishyBoids = {}));
 var FishyBoids;
@@ -40,8 +46,8 @@ var FishyBoids;
     var FishGeometry = (function (_super) {
         __extends(FishGeometry, _super);
         function FishGeometry() {
-            _super.call(this);
-            this.vertices = [
+            var _this = _super.call(this) || this;
+            _this.vertices = [
                 new THREE.Vector3(5, 0, 0),
                 new THREE.Vector3(0, 3, 0),
                 new THREE.Vector3(-4, 0, 0),
@@ -55,14 +61,15 @@ var FishyBoids;
                 new THREE.Vector3(2, -1, -1.5),
                 new THREE.Vector3(1, -1, -1.5),
             ];
-            this.faces = [
+            _this.faces = [
                 new THREE.Face3(2, 0, 1),
                 new THREE.Face3(2, 0, 3),
                 new THREE.Face3(2, 4, 5),
                 new THREE.Face3(6, 7, 8),
                 new THREE.Face3(9, 10, 11),
             ];
-            this.computeFaceNormals();
+            _this.computeFaceNormals();
+            return _this;
         }
         FishGeometry.prototype.moveTail = function (newPos) {
             this.vertices[4].z = this.vertices[5].z = newPos;
@@ -75,7 +82,7 @@ var FishyBoids;
                             newPos;
         };
         return FishGeometry;
-    })(THREE.Geometry);
+    }(THREE.Geometry));
     FishyBoids.FishGeometry = FishGeometry;
 })(FishyBoids || (FishyBoids = {}));
 var FishyBoids;
@@ -192,7 +199,7 @@ var FishyBoids;
             return v;
         };
         return Boid;
-    })();
+    }());
     FishyBoids.Boid = Boid;
 })(FishyBoids || (FishyBoids = {}));
 var FishyBoids;
@@ -202,8 +209,9 @@ var FishyBoids;
         function Predator(position, velocity) {
             if (position === void 0) { position = new THREE.Vector3(); }
             if (velocity === void 0) { velocity = new THREE.Vector3(); }
-            _super.call(this, position, velocity);
-            this.speed = 1;
+            var _this = _super.call(this, position, velocity) || this;
+            _this.speed = 1;
+            return _this;
         }
         Predator.prototype.calcBoidInteraction = function (boid) {
             var distance = this.position.distanceTo(boid.position);
@@ -226,7 +234,7 @@ var FishyBoids;
             this.position.add(this.velocity);
         };
         return Predator;
-    })(FishyBoids.Boid);
+    }(FishyBoids.Boid));
     FishyBoids.Predator = Predator;
 })(FishyBoids || (FishyBoids = {}));
 var FishyBoids;
@@ -268,7 +276,7 @@ var FishyBoids;
             this.backendRenderer.setSize(this.width, this.height);
         };
         return Renderer;
-    })();
+    }());
     FishyBoids.Renderer = Renderer;
 })(FishyBoids || (FishyBoids = {}));
 var FishGeometry = FishyBoids.FishGeometry;
@@ -280,7 +288,7 @@ var renderer;
 var FishyBoidsSim = (function () {
     function FishyBoidsSim() {
         this.boidsCount = 200;
-        this.predatorOn = true;
+        this.predatorOn = false;
         this.boids = new Array();
         this.boundsWidth = 600;
         this.boundsHeight = 400;
@@ -321,8 +329,8 @@ var FishyBoidsSim = (function () {
         for (var i = 0; i < this.boids.length; i++) {
             boid = this.boids[i];
             boid.update(this.boids);
-            boid.setAvoidTarget(this.predator.position);
             if (this.predatorOn == true) {
+                boid.setAvoidTarget(this.predator.position);
                 this.predator.calcBoidInteraction(boid);
             }
             fishMesh = this.fishMeshes[i];
@@ -340,7 +348,7 @@ var FishyBoidsSim = (function () {
         }
     };
     return FishyBoidsSim;
-})();
+}());
 var fishyBoids;
 function init() {
     renderer = new Renderer(document.getElementById('content'), window.innerWidth, window.innerHeight);

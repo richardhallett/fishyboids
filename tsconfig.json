@@ -1,16 +1,15 @@
 {
     "compilerOptions": {
         "target": "es5",
+        "lib": [ "es2015", "dom" ],
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
         "out": "./js/app.js",
         "sourceMap": true,
-        "watch": false    
-    },    
+        "watch": false
+    },
     "exclude": [
-        "typings/main.d.ts",
-        "typings/main",
         "js"
     ]
 }

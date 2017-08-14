@@ -1,3 +1,3 @@
 .vsCode/
-typings/
+node_modules/
 *.map
