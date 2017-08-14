@@ -287,7 +287,7 @@ var Renderer = FishyBoids.Renderer;
 var renderer;
 var FishyBoidsSim = (function () {
     function FishyBoidsSim() {
-        this.boidsCount = 200;
+        this.boidsCount = 500;
         this.predatorOn = false;
         this.boids = new Array();
         this.boundsWidth = 600;
