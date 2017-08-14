@@ -14,7 +14,7 @@ var renderer: Renderer;
 
 class FishyBoidsSim {
 
-    public boidsCount:Number = 200;
+    public boidsCount:Number = 500;
     public predatorOn:boolean = false;
 
     boids: Array<Boid> = new Array<Boid>();
